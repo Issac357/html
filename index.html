@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8" />	
+		<title>360浏览器</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body,html{
+			height: 100%;
+			width: 100%;
+		}
+		.fullpage{
+			height: 100%;
+			width: 100%;
+		}
+		.section{
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+		.page1{background: #0ea4d5;}
+		.page2{background: #2ab561;}
+		.page3{background: #de8910;}
+		.page4{background: #16ba9d;}
+		.page5{background: #0da5d6;}
+		.logo{
+			width: 251px;
+			height: 186px;
+			margin: 80px auto 0;
+		}
+		.text{
+			text-align: center;
+			margin-top: 80px;
+
+		}
+		/*初始值*/
+		.text img{
+			opacity: 0.2;
+			margin: 0 20px;
+			/*linear延迟设置  transition css过渡动画*/
+			transition: all 3s linear 0s;
+		}
+		/*结束值*/
+		.page1:hover .text img{
+			opacity: 1;
+			margin: 0;
+			transition: all 3s ease-in-out 0s;
+		}
+		.text02{
+			text-align: center;
+			margin-top: 40px;
+		}
+		
+		
+		
+		.box{
+			width: 1160px;
+			height: 100%;
+			margin: 0 auto 0;
+			padding-top: 80px ;
+		}
+		.shield{
+			width: 408px;
+			height: 100%;
+			float: left;
+			
+		}
+		.shield img{
+			float: left;
+			transition: all 1s linear 0s;
+		}
+		.s1{
+			transform: rotate(15deg) translate(200px, 300px);
+		}
+		.s2{
+			transform: rotate(18deg) translate(200px, 30px);
+		}
+		.s3{
+			transform: rotate(14deg) translate(110px, 320px);
+		}
+		.s4{
+			transform: rotate(5deg) translate(10px, 20px);
+		}
+		.s5{
+			transform: rotate(-5deg) translate(20px, 100px);
+		}
+		.s6{
+			transform: rotate(5deg) translate(200px, -60px);
+		}
+		.s7{
+			transform: rotate(35deg) translate(120px, 80px);
+		}
+		.s8{
+			transform: rotate(25deg) translate(20px, -80px);
+		}
+		.s9{
+			transform: rotate(-15deg) translate(200px, -300px);
+		}
+		
+		.page2:hover .shield img{
+			transform: rotate(0deg) translate(0, 0);
+		}
+		.info2{
+			width: 635px;
+			height: 100%;
+			/*margin: 200px 20px 200px 600px;*/
+			float: right;
+		}
+		.info2 img{
+			margin-top:80px ;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="fullpage">
+
+		<div class="section page1">
+		<!-- logo图标 -->
+			<div class="logo">
+				<img src="img/logo.png">
+			</div>
+			<div class="text">
+			<!-- 图片 -->
+			<img src="img/text_1.png">
+			<img src="img/text_2.png">
+			<img src="img/text_3.png">
+			<img src="img/text_4.png">
+			<img src="img/text_5.png">
+			<img src="img/text_6.png">
+			<img src="img/text_7.png">
+			<img src="img/text_8.png">
+			</div>
+			<div class="text02">
+				<img src="img/info_1.png">
+			</div>
+			
+		</div>
+
+		<div class="section page2">
+			<div class="box">
+			
+				<div class="shield">
+					<img class="s1" src="img/shield_1.png">
+					<img class="s2" src="img/shield_2.png">
+					<img class="s3" src="img/shield_3.png">
+					<img class="s4" src="img/shield_4.png">
+					<img class="s5" src="img/shield_5.png">
+					<img class="s6" src="img/shield_6.png">
+					<img class="s7" src="img/shield_7.png">
+					<img class="s8" src="img/shield_8.png">
+					<img class="s9" src="img/shield_9.png">
+			
+			
+			
+				</div>
+				
+				<div class="info2">
+					<img src="img/info_2.png">
+				</div>
+		
+		</div>
+		
+		</div>
+		<div class="section page3">3</div>
+		<div class="section page4">4</div>
+		<div class="section page5">5</div>
+	</div>
+</body>
+</html>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.fullPage.min.js"></script>
+
+<script>
+	$('.fullpage').fullpage()
+</script>
